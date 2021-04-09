@@ -6,9 +6,10 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class Buttons extends JButton {
-	public Buttons(String label, ButtonGroup bg) {
+	public Buttons(String label, ButtonGroup bg, ActionListener actionListener) {
 		bg.add(this);
-		this.addActionListener(new ButtonListener());
+		this.addActionListener(actionListener);
+		
 	}
 
 	private class ButtonListener implements ActionListener {

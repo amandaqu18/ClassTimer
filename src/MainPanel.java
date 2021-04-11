@@ -11,51 +11,41 @@ import javax.swing.JPanel;
 
 public class MainPanel extends JPanel {
 	public MainPanel() {
-		super(new GridLayout());
-		BorderLayout main = new BorderLayout();
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.gray);
+
 		
 		this.setBackground(java.awt.Color.white);
 		this.setPreferredSize(new java.awt.Dimension(500, 1000));
 		this.setSize(new java.awt.Dimension(500, 1000));
 		ButtonGroup bg = new ButtonGroup();
 		
-		// add panel on top
-		// set size of buttons
-		JLabel label1 = new JLabel("50 Min");
-		this.add(new Buttons(label1, bg, new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
 
-			}
-		}));
+		JButton btn1 = new JButton("50 Min");
+		JButton btn2 = new JButton("75 Min (1 hr. 15 min.");
+		JButton btn3 = new JButton("110 Min (1 hr. 50 min.)");
+		JButton btn4 = new JButton("120 Min (2 hrs.)");
+		JButton btn5 = new JButton("180 Min (3 hrs.)");
+
 		
-		JLabel label2 = new JLabel("75 Min (1 hr. 15 min.)");
-		this.add(new Buttons(label2, bg, new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		}));
 		
-		JLabel label3 = new JLabel("110 Min (1 hr. 50 min.)");
-		this.add(new Buttons(label3, bg, new ActionListener() {
+
+		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 			}
-		}));
+		});
+
+		bg.add(btn1);
+		bg.add(btn2);
+		bg.add(btn3);
+		bg.add(btn4);
+		bg.add(btn5);
+
+		this.add(btn1);
+		this.add(btn2);
+		this.add(btn3);
+		this.add(btn4);
+		this.add(btn5);
+
 		
-		JLabel label4 = new JLabel("120 Min (2 hrs.)");
-		this.add(new Buttons(label4, bg, new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		}));
-		
-		JLabel label5 = new JLabel("180 Min (3 hrs.)");
-		this.add(new Buttons(label5, bg, new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		}));
 	}
 }

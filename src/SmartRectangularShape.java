@@ -60,16 +60,16 @@ public class SmartRectangularShape {
 		return (int) _shape.getHeight();
 	}
 
-	public void setWidth(int w) {
+	public void setWidth(double w) {
 		_shape.setFrame(_shape.getX(), _shape.getY(), w, _shape.getHeight());
 	}
 
-	public void setHeight(int h) {
+	public void setHeight(double h) {
 		_shape.setFrame(_shape.getX(), _shape.getY(), _shape.getWidth(), h);
 	}
 
-	public void setSize(int w, int h) {
-		_shape.setFrame(_shape.getX(), _shape.getY(), w, h);
+	public void setSize(double d, double e) {
+		_shape.setFrame(_shape.getX(), _shape.getY(), d, e);
 	}
 
 	public void setColor(Color c) {

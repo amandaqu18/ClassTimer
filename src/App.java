@@ -8,6 +8,7 @@ public class App {
 		frame.add(new GraphicPanel());
 		frame.add(new MainPanel()); // We will never need a reference or a way to access that variable of type
 									// MainPanel; only add top frame
+		
 		frame.pack(); // Resize the frame; pack the frame to take same size as panel
 		frame.setVisible(true); // So the frame gets displayed
 	}

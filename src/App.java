@@ -5,8 +5,12 @@ public class App {
 	public App() {
 		JFrame frame = new JFrame("Class Timer"); // Create an instance of the JFrame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close when x clicked
-		frame.add(new GraphicPanel());
-		frame.add(new MainPanel()); // We will never need a reference or a way to access that variable of type
+		
+		GraphicPanel graphicPanel = new GraphicPanel();
+		MainPanel mainPanel = new MainPanel(graphicPanel);//Making instances so that we can pass in the main panel to the graphics panel.  
+		
+		frame.add(graphicPanel);
+		frame.add(mainPanel); // We will never need a reference or a way to access that variable of type
 									// MainPanel; only add top frame
 		
 		frame.pack(); // Resize the frame; pack the frame to take same size as panel

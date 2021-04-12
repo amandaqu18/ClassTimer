@@ -43,10 +43,14 @@ public class GraphicPanel extends JPanel {
 			rectangle.move(0,  0.25);
 			
 		}
-		rectangle.move(0.5, 0);
+		else if (selectedString.equalsIgnoreCase("5")) {
+			rectangle.move(0,  0.25);
+			
+		}
 		if(rectangle.getHeight() > this.getHeight()) {
 			rectangle.setSize(1000, 1);
 		}
+		this.repaint();
 	}
 	
 	@Override

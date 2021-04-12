@@ -21,7 +21,7 @@ public class AnimationTimer extends Timer {
 		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			panel.move(1, 0);
+			panel.move();
 			panel.repaint();
 		}
 	}

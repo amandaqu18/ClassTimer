@@ -8,48 +8,53 @@ import javax.swing.JPanel;
 public class GraphicPanel extends JPanel {
 	private String selectedString;
 	private AnimationTimer timer;
-	private Rectangle rectangle;
+	private ProgressBar rectangle;
 	
 	public GraphicPanel() {
 		super();
 		this.setSize(1000, 1000);
-		this.setBackground(Color.gray);
+		this.setBackground(Color.white);
 		
-		selectedString = "1";
+		
+		selectedString = "6";
 		
 		// Setting up the timer
 		timer = new AnimationTimer(this);
 		
-		rectangle = new Rectangle();
-		rectangle.setSize(50, 1000);
+		rectangle = new ProgressBar();
+		rectangle.setSize(1, 1000);
 		rectangle.setLocation(0, 0);
 		rectangle.setColor(Color.blue);
 		
 				
 		//Start the timer
+		timer.setDelay(10800);
 		timer.start();
 	}
 
-	public void move(double dx, double dy) {
-		timer.setDelay(1000);
+	public void move() {
+		System.out.println(selectedString);
 		if (selectedString.equalsIgnoreCase("1")) {
-			rectangle.expand(3, 0);
+			rectangle.fill(3.6, 0);
 		}
 		else if (selectedString.equalsIgnoreCase("2")) {
-			rectangle.expand(22,  0);
+			rectangle.fill(2.4,  0);
 			
 		}
 		else if (selectedString.equalsIgnoreCase("3")) {
-			rectangle.expand(15,  0);
+			rectangle.fill(1.63,  0);
 			
 		}
 		else if (selectedString.equalsIgnoreCase("4")) {
-			rectangle.expand(13.8,  0);
+			rectangle.fill(1.5,  0);
 			
 		}
 		else if (selectedString.equalsIgnoreCase("5")) {
-			rectangle.expand(09.25, 0);
+			rectangle.fill(1, 0);
 			
+		}
+		else {
+			rectangle.fill(0, 0);
 		}
 		if(rectangle.getWidth() > this.getWidth()) {
 			rectangle.setSize(1, 1000);

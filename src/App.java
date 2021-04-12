@@ -1,20 +1,23 @@
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
 
-public class App {
+public class App extends JFrame{
 	// Constructor
 	public App() {
-		JFrame frame = new JFrame("Class Timer"); // Create an instance of the JFrame
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close when x clicked
+		this.setSize(1000, 1000);
+		this.setLayout(new BorderLayout());
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close when x clicked
 		
 		GraphicPanel graphicPanel = new GraphicPanel();
-		MainPanel mainPanel = new MainPanel(graphicPanel);//Making instances so that we can pass in the main panel to the graphics panel.  
+		ControlPanel controlPanel = new ControlPanel(graphicPanel);//Making instances so that we can pass in the main panel to the graphics panel.  
 		
-		frame.add(graphicPanel);
-		frame.add(mainPanel); // We will never need a reference or a way to access that variable of type
-									// MainPanel; only add top frame
+		this.add(graphicPanel, BorderLayout.CENTER);
+		this.add(controlPanel,BorderLayout.SOUTH); // We will never need a reference or a way to access that variable of type
+												// MainPanel; only add top frame
 		
-		frame.pack(); // Resize the frame; pack the frame to take same size as panel
-		frame.setVisible(true); // So the frame gets displayed
+//		this.pack(); // Resize the frame; pack the frame to take same size as panel
+		this.setVisible(true); // So the frame gets displayed
 	}
 
 	public static void main(String[] args) {

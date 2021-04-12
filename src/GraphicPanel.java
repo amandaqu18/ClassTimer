@@ -12,43 +12,47 @@ public class GraphicPanel extends JPanel {
 	
 	public GraphicPanel() {
 		super();
+		this.setSize(1000, 1000);
+		this.setBackground(Color.gray);
+		
+		selectedString = "1";
 		
 		// Setting up the timer
 		timer = new AnimationTimer(this);
 		
 		rectangle = new Rectangle();
-		rectangle.setSize(1, 1000);
+		rectangle.setSize(50, 1000);
 		rectangle.setLocation(0, 0);
-		rectangle.setColor(Color.red);
+		rectangle.setColor(Color.blue);
 		
-		this.selectedString = selectedString;
 				
 		//Start the timer
 		timer.start();
 	}
 
 	public void move(double dx, double dy) {
+		timer.setDelay(1000);
 		if (selectedString.equalsIgnoreCase("1")) {
-			rectangle.expand(0.0 , 0.5);
+			rectangle.expand(3, 0);
 		}
 		else if (selectedString.equalsIgnoreCase("2")) {
-			rectangle.expand(0,  0.25);
+			rectangle.expand(22,  0);
 			
 		}
 		else if (selectedString.equalsIgnoreCase("3")) {
-			rectangle.move(0,  0.25);
+			rectangle.expand(15,  0);
 			
 		}
 		else if (selectedString.equalsIgnoreCase("4")) {
-			rectangle.move(0,  0.25);
+			rectangle.expand(13.8,  0);
 			
 		}
 		else if (selectedString.equalsIgnoreCase("5")) {
-			rectangle.move(0,  0.25);
+			rectangle.expand(09.25, 0);
 			
 		}
-		if(rectangle.getHeight() > this.getHeight()) {
-			rectangle.setSize(1000, 1);
+		if(rectangle.getWidth() > this.getWidth()) {
+			rectangle.setSize(1, 1000);
 		}
 		this.repaint();
 	}

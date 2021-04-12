@@ -10,17 +10,16 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class MainPanel extends JPanel {
-	public MainPanel() {
-
+	public MainPanel(GraphicPanel graphicPanel) {
+		this.setBackground(java.awt.Color.red);
+//		this.setPreferredSize(new java.awt.Dimension(500, 1000));
+//		this.setSize(new java.awt.Dimension(500, 1000));
 		
-		this.setBackground(java.awt.Color.white);
-		this.setPreferredSize(new java.awt.Dimension(500, 1000));
-		this.setSize(new java.awt.Dimension(500, 1000));
 		ButtonGroup bg = new ButtonGroup();
 		
 
 		JButton btn1 = new JButton("50 Min");
-		JButton btn2 = new JButton("75 Min (1 hr. 15 min.");
+		JButton btn2 = new JButton("75 Min (1 hr. 15 min.)");
 		JButton btn3 = new JButton("110 Min (1 hr. 50 min.)");
 		JButton btn4 = new JButton("120 Min (2 hrs.)");
 		JButton btn5 = new JButton("180 Min (3 hrs.)");
@@ -30,7 +29,31 @@ public class MainPanel extends JPanel {
 
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				graphicPanel.setStringSelected("1");
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				graphicPanel.setStringSelected("2");
+			}
+		});
+		
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				graphicPanel.setStringSelected("3");
+			}
+		});
+		
+		btn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				graphicPanel.setStringSelected("4");
+			}
+		});
+		
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				graphicPanel.setStringSelected("5");
 			}
 		});
 

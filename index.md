@@ -1,13 +1,9 @@
-## Class Timer
+# What our project does
 
-Group Three's Module 9 project
+For this project a GUI-based application was created for the students of Quinnipiac University. This application is a class timer which allows students to set a timer in accordance to their class timings. Five options with the various class durations are given. Once an option is clicked the timer starts and a blue progress bar starts and expands. Once the bar has reached the end of the canvas width the student knows that the class is/should be over.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
+# How to install our project 
+## External packages needed 
 
 # Header 1
 ## Header 2

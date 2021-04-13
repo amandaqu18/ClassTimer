@@ -5,4 +5,4 @@ a blue progress bar starts and expands. Once the bar has reached the end of the 
 
 More documentation can be found on the project’s GitHub Pages site: 
 
-[Class Timer](url)
+[Class Timer](https://amandaqu18.github.io/ClassTimer/)

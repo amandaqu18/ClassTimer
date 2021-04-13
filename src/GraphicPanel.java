@@ -36,6 +36,7 @@ public class GraphicPanel extends JPanel {
 		System.out.println(selectedString);
 		if (selectedString.equalsIgnoreCase("1")) {
 			rectangle.fill(3.6, 0);
+
 		}
 		else if (selectedString.equalsIgnoreCase("2")) {
 			rectangle.fill(2.4,  0);
@@ -74,7 +75,7 @@ public class GraphicPanel extends JPanel {
 		return selectedString;
 	}
 
-	public void setStringSelected(String selectedSelected) {
+	public void setStringSelected(String selectedString) {
 		this.selectedString = selectedString;
 	}
 }

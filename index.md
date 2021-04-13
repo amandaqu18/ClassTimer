@@ -13,4 +13,4 @@ For this project a GUI-based application was created for the students of Quinnip
 - Installation is nice and simple if you use the import link for the repository you should be able to clone and import the project straight to your laptop/desktop
 
 
-![Banner](./banner.jpeg)
+![Banner](./quinnipiac.png)

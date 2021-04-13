@@ -66,12 +66,12 @@ public class MainPanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				if(graphicPanel.getBackground() == Color.white) {
 					graphicPanel.setBackground(Color.black);
-					btn1.setForeground(Color.green);
-					btn2.setForeground(Color.green);
-					btn3.setForeground(Color.green);
-					btn4.setForeground(Color.green);
-					btn5.setForeground(Color.green);
-					theme.setForeground(Color.green);
+					btn1.setForeground(Color.orange);
+					btn2.setForeground(Color.orange);
+					btn3.setForeground(Color.orange);
+					btn4.setForeground(Color.orange);
+					btn5.setForeground(Color.orange);
+					theme.setForeground(Color.orange);
 				} else {
 					graphicPanel.setBackground(Color.white);
 					btn1.setForeground(Color.black);

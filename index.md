@@ -4,7 +4,7 @@ For this project a GUI-based application was created for the students of Quinnip
 
 # How to install our project 
 ## Things you need for the project to run 
-- Java at the most updated version _Java SE 16_
+- Java at the most updated version: _Java SE 16_
 - [Import link for the repository](https://github.com/amandaqu18/ClassTimer.git) 
 - The latest update on whatever platform you use for programming assignments _ex: IntelliJ or Eclipse_
 - A class you need to keep track of time for 
